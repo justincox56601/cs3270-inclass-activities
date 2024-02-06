@@ -1,0 +1,23 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+}
+
+body{
+	padding:3rem;
+}
+
+.chirp{
+    width: 300px;
+    border: 1px solid lightblue;
+    margin-bottom: 1.5rem;
+}
+
+.chirp-author{
+    font-weight: bold;
+}
+
+.chirp-caption{
+    font-size: 1.15rem;
+}
