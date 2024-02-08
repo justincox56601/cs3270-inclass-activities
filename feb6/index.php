@@ -43,8 +43,8 @@ require_once(ABS_PATH . '/services/user.service.php');
 
 
 
-$isLoggedIn = false;
-$user = null;
+$isLoggedIn = isset($_POST['username']);
+$user = ($isLoggedIn)? get_user($_POST['username']) : null;
 
 $dataArray = get_feed();
 
@@ -59,11 +59,13 @@ $dataArray = get_feed();
 </head>
 <body>
     <h1>Chirper</h1>
-    <?php  //user ternary here to show one view if logged in and a different one if not ?>
+    <?php  ($isLoggedIn)? include(ABS_PATH . '/views/welcome.view.php') : include(ABS_PATH . '/views/login.view.php')?>
     <?php 
-        //check to make sure user is logged in before showing feed
-        //use a foreach loop to show the feed
-        //use include() to show the prebuilt chirp view    
+        if($isLoggedIn):
+            foreach($dataArray as $data):
+                include(ABS_PATH . '/views/chirp.view.php');
+            endforeach;
+        endif;
     ?>
 </body>
 </html>
