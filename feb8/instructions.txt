@@ -3,7 +3,7 @@
 2.  Fill out the applicant summary view.  There is already a file for this but it is blank.  The view should expect an associative array called $applicant and should display their first name, last name, their years of experience, their level (jr, mid, senior, etc...), and their skills.  Hint: It will be helpful to use the below script to display a single user to the screen so that you can get a feel for all what is included / available on the user object.  Paste it below all of the includes from index.php. 
 
 echo '<pre>';
-print_r($users[0]);
+print_r($users[0]); 
 echo '</pre>';
 
 3. Look over the applicant service file.  It has a method already called get_users_from_database.  Use this method in the index.php file to populate your applicant summary view and confirm the applicant summary view is displaying each applicant properly.

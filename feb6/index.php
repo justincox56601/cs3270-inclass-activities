@@ -63,7 +63,10 @@ $dataArray = get_feed();
     <?php 
         if($isLoggedIn):
             foreach($dataArray as $data):
-                include(ABS_PATH . '/views/chirp.view.php');
+                if(in_array()){
+                    include(ABS_PATH . '/views/chirp.view.php');
+                }
+                
             endforeach;
         endif;
     ?>
