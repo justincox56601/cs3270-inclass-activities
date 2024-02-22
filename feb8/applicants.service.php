@@ -53,7 +53,8 @@ function get_selected_users(string $level, int $experience, array $skills):array
 }
 
 function get_users_by_level_refactored(array $users, string $level):array{
-	return array_filter($users, fn($user)=>$user['level'] === $level);
+	//return array_filter($users, fn($user)=>$user['level'] === $level);
+	return array_filter($this->_applicants, fn($applicant)=>$applicant->get_level === $level);
 	
 }
 
